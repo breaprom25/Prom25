@@ -1,0 +1,100 @@
+/* Reset & base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body, html {
+    height: 100%;
+    background-color: #000;
+    font-family: 'Courier New', Courier, monospace;
+    color: white;
+  }
+  
+  .header {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: fadeIn 1.5s ease-in;
+  }
+  
+  .textbox {
+    text-align: center;
+  }
+  
+  /* Desktop layout: 4 columns side-by-side */
+  .countdown {
+    display: flex;
+    gap: 3vw;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5vh;
+  }
+  
+  .unit {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .number {
+    overflow: hidden;
+    height: 5vw;
+    width: 6vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+    position: relative;
+  }
+  
+  .slide {
+    position: absolute;
+    font-size: 5vw;
+    font-weight: bold;
+    color: white;
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+  }
+  
+  .label {
+    font-size: 1vw;
+    margin-top: 0.5vh;
+    color: #999;
+  }
+  
+  @keyframes fadeIn {
+    to { opacity: 1; }
+  }
+  
+  /* 
+     Mobile layout (max-width: 600px):
+     - Switch to a 2x2 grid
+     - Increase container sizes to avoid cutting off digits
+  */
+  @media (max-width: 600px) {
+    .countdown {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 5vw; /* More spacing between columns & rows */
+      justify-items: center;
+      align-items: center;
+      margin-top: 3vh;
+    }
+  
+    .number {
+      width: 24vw;
+      height: 24vw;
+    }
+  
+    .slide {
+      font-size: 18vw; /* Slightly smaller so "49"/"59" won't cut off */
+      line-height: 1;
+    }
+  
+    .label {
+      font-size: 4vw;
+    }
+  }
+  
