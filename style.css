@@ -1,7 +1,7 @@
 
 @font-face {
     font-family: 'Adventure';
-    src: url('./fonts/Adventure.otf') format('opentype');
+    src: url('fonts/Adventure.otf') format('opentype');
   }
   
   * {
@@ -44,7 +44,7 @@
   .header {
     position: relative;
     height: 100vh;
-    background-image: url("./images/bowers_background.JPG"); /* Main image */
+    background-image: url("images/bowers_background.JPG"); /* Main image */
     background-size: cover;
     background-position: center;
     overflow: hidden;
@@ -56,7 +56,7 @@
   .header .bg { /*im still iffy about this im not so sure yet */
   position: absolute;
   inset: 0;
-  background-image: url("./images/bowers_background.JPG");
+  background-image: url("images/bowers_background.JPG");
   background-size: cover;
   background-position: center;
   
@@ -76,7 +76,7 @@
     content: "";
     position: absolute;
     inset: 0;
-    background-image: url("./images/old_map_filter.png");
+    background-image: url("images/old_map_filter.png");
     background-repeat: repeat;
     opacity: 0.35;
     mix-blend-mode: multiply;
